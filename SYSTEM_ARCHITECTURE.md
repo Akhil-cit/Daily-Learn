@@ -7,19 +7,29 @@ This diagram illustrates how the four main components interact.
 
 ```mermaid
 graph TD
-    A[Android App] <-->|HTTP/JSON + ngrok-skip-header| B[Flask API]
-    B <-->|SQL Queries| C[(MySQL Database)]
-    
-    subgraph "Local Development (XAMPP)"
-    B
-    C
+    subgraph "Mobile Client"
+        A[📱 Android App]
     end
-    
+
+    subgraph "Local Environment (XAMPP)"
+        B[🐍 Flask API]
+        C[(🗄️ MySQL Database)]
+    end
+
     subgraph "External Services"
-    D[Groq AI LLM]
+        D[🤖 Groq AI LLM]
     end
-    
+
+    %% Connections
+    A <-->|HTTP/JSON + ngrok-skip-header| B
+    B <-->|SQL Queries| C
     B <-->|Prompt/Completion| D
+
+    %% Styling
+    style A fill:#e1f5fe,stroke:#01579b
+    style B fill:#e8f5e9,stroke:#2e7d32
+    style C fill:#fff3e0,stroke:#ef6c00
+    style D fill:#f3e5f5,stroke:#7b1fa2
 ```
 
 ---
