@@ -9,16 +9,17 @@ This diagram illustrates how the four main components interact.
 graph TD
     A[Android App] <-->|HTTP/JSON + ngrok-skip-header| B[Flask API]
     B <-->|SQL Queries| C[(MySQL Database)]
-    B <-->|Prompt/Completion| D[Groq AI LLM]
     
-    subgraph "Local / AWS Environment"
+    subgraph "Local Development (XAMPP)"
     B
     C
     end
     
     subgraph "External Services"
-    D
+    D[Groq AI LLM]
     end
+    
+    B <-->|Prompt/Completion| D
 ```
 
 ---
@@ -28,7 +29,7 @@ graph TD
 ### A. Authentication Flow (The "Handshake")
 1. **Request**: Android sends `username` and `password` via POST.
 2. **Logic**: Flask hashes the password using `werkzeug.security`.
-3. **Storage**: `users` table stores `id`, `username`, and `password_hash`.
+3. **Storage**: Data is stored in the MySQL database managed via **XAMPP Control Panel**.
 4. **Session**: Android stores `user_id` in `SharedPreferences` ("auth") for persistent login.
 5. **Nuance**: Every subsequent request from Android must include the `user_id` in the query params or JSON body.
 
