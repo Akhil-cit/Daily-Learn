@@ -1,0 +1,11 @@
+- `[x]` Backend Updates
+    - `[x]` Update `requirements.txt` with `mysql-connector-python` and `werkzeug`.
+    - `[x]` Update `.env` with DB credentials.
+    - `[x]` Implement DB initialization and User models in `app.py`.
+    - `[x]` Add `/register` and `/login` endpoints.
+    - `[x]` Update study plan endpoints to use MySQL and `user_id`.
+- `[x]` Android App Updates
+    - `[x]` Add Login/Signup data classes and API calls.
+    - `[x]` Implement `LoginScreen` and `SignupScreen`.
+    - `[x]` Update `StudyAppUI` for session management and screen switching.
+    - `[x]` Update all existing screens to pass `userId`.
