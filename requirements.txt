@@ -1,0 +1,6 @@
+flask
+groq
+pdfplumber
+python-dotenv
+mysql-connector-python
+werkzeug

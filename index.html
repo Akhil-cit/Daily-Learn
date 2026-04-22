@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Study App</title>
+</head>
+<body>
+
+<h1>📄 Upload Your Syllabus</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="pdf" required>
+    <button type="submit">Upload</button>
+</form>
+
+<h2>📚 Topics:</h2>
+
+<ul>
+    {% for topic in topics %}
+        <li>
+            <a href="/topic/{{ topic }}">{{ topic }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
