@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_upload"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:title="Add Your Syllabus"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="@drawable/ic_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Hero Header Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📚"
+                        android:textSize="48sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Turn Your Syllabus into a Plan"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:fontFamily="sans-serif-medium"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Upload a photo, PDF, or text file. We'll automatically extract all topics and build your daily schedule."
+                        android:textSize="13sp"
+                        android:textColor="@color/textSecondary"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.3" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Upload Options Grid / List -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose an Upload Method"
+                android:textSize="14sp"
+                android:textColor="@color/textSecondary"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Option 1: Image / Photo OCR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pick_image"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="📷  Photo / Image of Syllabus (OCR)"
+                android:textSize="14sp"
+                android:backgroundTint="@color/colorPrimary"
+                app:cornerRadius="12dp" />
+
+            <!-- Option 2: PDF Document -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pick_pdf"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="📄  PDF Syllabus Document"
+                android:textSize="14sp"
+                android:backgroundTint="@color/colorSecondary"
+                app:cornerRadius="12dp" />
+
+            <!-- Option 3: Text File -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pick_text"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="📝  Text File (.txt / .md)"
+                android:textSize="14sp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:cornerRadius="12dp" />
+
+            <!-- Option 4: Paste Directly -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_paste_text"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:text="✍  Paste Syllabus Text Directly"
+                android:textSize="14sp"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                app:cornerRadius="12dp" />
+
+            <!-- Loading & Status -->
+            <ProgressBar
+                android:id="@+id/pb_uploading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="16dp"
+                android:visibility="gone" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_parsed_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="@color/colorSurfaceVariant"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="✅ Syllabus Extracted Successfully!"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorSuccess"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_upload_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/textPrimary"
+                        android:lineSpacingMultiplier="1.3" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_confirm_import"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="16dp"
+                        android:text="🚀 Confirm &amp; Generate Daily Plan"
+                        android:backgroundTint="@color/colorPrimary"
+                        app:cornerRadius="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_edit_manually"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="8dp"
+                        android:text="✏ Review &amp; Edit in Syllabus Tree"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

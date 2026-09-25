@@ -1,0 +1,96 @@
+{
+  "courseName": "OOP",
+  "courseCode": "25SS212",
+  "totalDays": 5,
+  "studyDaysCount": 4,
+  "revisionDaysCount": 1,
+  "totalEstimatedHours": 6.0,
+  "studyDays": [
+    {
+      "dayNumber": 1,
+      "date": null,
+      "type": "study",
+      "topics": [
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Classes",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        }
+      ],
+      "estimatedHours": 2.0
+    },
+    {
+      "dayNumber": 2,
+      "date": null,
+      "type": "study",
+      "topics": [
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Objects",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        }
+      ],
+      "estimatedHours": 2.0
+    },
+    {
+      "dayNumber": 3,
+      "date": null,
+      "type": "study",
+      "topics": [
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Inheritance",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        }
+      ],
+      "estimatedHours": 2.0
+    },
+    {
+      "dayNumber": 4,
+      "date": null,
+      "type": "study",
+      "topics": [],
+      "estimatedHours": 0.0
+    }
+  ],
+  "revisionDays": [
+    {
+      "dayNumber": 5,
+      "date": null,
+      "type": "revision",
+      "topics": [
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Classes",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        },
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Objects",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        },
+        {
+          "unitNumber": 1,
+          "unitName": "Basics",
+          "topicName": "Inheritance",
+          "subtopics": [],
+          "estimatedHours": 2.0
+        }
+      ],
+      "estimatedHours": 6.0
+    }
+  ],
+  "warnings": [
+    "1 study day(s) have no topics because targetDays (4) far exceeds the number of syllabus topics (3). Consider reducing targetDays."
+  ]
+}

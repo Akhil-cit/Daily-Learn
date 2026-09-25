@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_unit_header.xml — Unit section header in subject detail -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp"
+    android:background="@color/colorSurfaceVariant">
+
+    <TextView
+        android:id="@+id/tv_unit_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Unit I – Arrays &amp; Linked Lists"
+        android:textSize="14sp"
+        android:textColor="@color/textPrimary"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:id="@+id/tv_unit_completion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2/5"
+        android:textSize="12sp"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

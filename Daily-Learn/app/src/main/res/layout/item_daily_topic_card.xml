@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top Header: Day Badge & Section tag -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Day pill badge -->
+            <TextView
+                android:id="@+id/tv_day_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAY 1"
+                android:textSize="12sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:background="@drawable/bg_badge_primary"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp" />
+
+            <TextView
+                android:id="@+id/tv_section_tag"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Principles of OOP"
+                android:textSize="12sp"
+                android:textColor="@color/textSecondary"
+                android:singleLine="true"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/tv_lecture_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱ 3h"
+                android:textSize="11sp"
+                android:textColor="@color/colorSecondary"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Topic Title -->
+        <TextView
+            android:id="@+id/tv_day_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Introduction to OOP"
+            android:textSize="16sp"
+            android:textColor="@color/textPrimary"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium" />
+
+        <!-- Bulleted Subtopics container -->
+        <LinearLayout
+            android:id="@+id/layout_subtopics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

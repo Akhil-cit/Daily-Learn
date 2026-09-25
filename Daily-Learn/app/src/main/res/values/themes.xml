@@ -1,0 +1,89 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme -->
+    <style name="Theme.DailyLearn" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorBottomNavBackground</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <!-- Splash / full-screen theme -->
+    <style name="Theme.DailyLearn.Splash" parent="Theme.DailyLearn">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+    </style>
+
+    <!-- Card style -->
+    <style name="Widget.DailyLearn.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="cardBackgroundColor">@color/colorCard</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="Widget.DailyLearn.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <style name="Widget.DailyLearn.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+    <!-- TextAppearances -->
+    <style name="TextAppearance.DailyLearn.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.DailyLearn.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/textPrimary</item>
+    </style>
+
+    <style name="TextAppearance.DailyLearn.Body" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/textSecondary</item>
+    </style>
+
+    <style name="TextAppearance.DailyLearn.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/textHint</item>
+    </style>
+
+    <!-- ProgressBar style -->
+    <style name="Widget.DailyLearn.ProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressTint">@color/colorPrimary</item>
+        <item name="android:progressBackgroundTint">@color/colorSurfaceVariant</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="Widget.DailyLearn.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/nav_item_color</item>
+        <item name="itemTextColor">@color/nav_item_color</item>
+        <item name="backgroundTint">@color/colorBottomNavBackground</item>
+    </style>
+
+    <!-- Chip style -->
+    <style name="Widget.DailyLearn.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="chipCornerRadius">8dp</item>
+    </style>
+
+    <!-- BottomSheetDialog with keyboard resize support -->
+    <style name="Theme.DailyLearn.BottomSheetDialog" parent="Theme.Material3.DayNight.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+    </style>
+</resources>

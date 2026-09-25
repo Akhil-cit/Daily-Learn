@@ -1,0 +1,19 @@
+# 12. Technology Stack
+
+The following table documents every technology, framework, and library utilized in Daily-Learn, based strictly on the production codebase:
+
+| Technology | Language | Architectural Layer | Purpose in Daily-Learn | Why Chosen | Alternative Considered & Why Rejected |
+|---|---|---|---|---|---|
+| **Android SDK (API 34 / Min 26)** | Java / Kotlin | Platform / Framework | Host mobile operating system environment. | Universal reach on Android consumer smartphones. | Cross-platform (Flutter/React Native) rejected due to complex native C++ JNI threading and ONNX memory overhead. |
+| **Java 17** | Java | Application / Domain | Core application, business logic, DAOs, and UI. | High stability, compile-time type safety, standard collegiate reference. | Kotlin only partially used; Java chosen for maximum transparency and pedagogical clarity. |
+| **C++ (C++17)** | C++ | Native Inference | Executes `llama.cpp` and GGML tensor operations. | Direct hardware CPU access, zero GC pauses, NEON vectorization. | Java-only inference rejected due to extreme slowness and memory overhead. |
+| **llama.cpp** | C++ | Native Inference Engine | On-device GGUF language model execution. | World's most efficient CPU LLM runtime; zero cloud dependency; low RAM footprint. | MediaPipe / ExecuTorch rejected due to limited hardware compatibility on older MediaTek chipsets. |
+| **Microsoft ONNX Runtime** | C++ / Java (`onnxruntime:1.16.3`) | Semantic Embeddings | Runs quantized MiniLM-L6-v2 transformer model (`model.onnx`). | Optimized mobile neural inference engine; fast CPU execution. | TensorFlow Lite rejected due to cumbersome custom BERT tokenizer requirements. |
+| **Google ML Kit Text Recognition** | Java (`play-services-mlkit-text-recognition:19.0.0`) | Document Ingestion | Offline on-device Optical Character Recognition (OCR). | Runs 100% on-device; high accuracy on mobile document scans; zero API cost. | Tesseract OCR rejected due to large binary size and lower accuracy on noisy mobile photos. |
+| **Android Room** | Java (`room-runtime:2.6.1`) | Data Layer / ORM | Embedded relational database management. | Compile-time SQL checking, automatic schema verification, relational queries. | Raw SQLite rejected due to high boilerplate and lack of compile-time verification. |
+| **SQLite** | C / SQL | Data Storage Engine | Underlying file-based relational database. | Zero configuration, battle-tested, ACID compliant, pre-installed on Android. | Realm / ObjectBox rejected due to proprietary licensing and binary overhead. |
+| **Android Jetpack ViewModel & LiveData** | Java (`lifecycle-viewmodel:2.7.0`) | Presentation / State | Lifecycle-aware UI state management. | Prevents memory leaks on orientation changes; decouples UI from business logic. | Custom state machines rejected to adhere to Google Android architecture standards. |
+| **ViewBinding** | XML / Java | UI Rendering | Safe view interaction. | Eliminates `findViewById` boilerplate and null pointer exceptions. | DataBinding rejected due to slower build times and unnecessary complexity. |
+| **CMake (3.22.1)** | CMake | Build System (Native) | Compiles native C++ shared library (`libnative-lib.so`). | Official Android NDK build tool; native integration with Gradle. | ndk-build (Makefiles) rejected as deprecated by Google. |
+| **Gradle (Kotlin DSL)** | Gradle / Kotlin | Build System (Project) | Dependency management, compilation, APK packaging. | Standard Android build automation system. | Maven rejected due to lack of official modern Android tooling support. |
+| **JUnit 4 & AndroidX Test** | Java | Quality Assurance | Unit testing and instrumented on-device tests. | Standard testing framework supported by Android Studio and CI/CD pipelines. | JUnit 5 rejected due to Android Gradle Plugin instrumented runner friction. |

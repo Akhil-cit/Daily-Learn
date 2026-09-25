@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">Daily Learn</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_title">Finish your syllabus\none topic at a time.</string>
+    <string name="onboarding_subtitle">Upload your syllabus. Tell us your exam date. We\'ll build your daily study plan.</string>
+    <string name="onboarding_get_started">Get Started</string>
+    <string name="label_name">Your Name</string>
+    <string name="label_course">Course / Degree</string>
+    <string name="label_semester">Semester</string>
+    <string name="label_daily_study_minutes">Daily Study Time (minutes)</string>
+    <string name="label_exam_date">Exam Date</string>
+    <string name="hint_name">e.g. Akhil Kumar</string>
+    <string name="hint_course">e.g. B.Tech Computer Science</string>
+    <string name="hint_semester">e.g. 3rd Semester</string>
+    <string name="hint_daily_minutes">e.g. 120</string>
+    <string name="btn_create_profile">Create My Plan</string>
+
+    <!-- Home -->
+    <string name="good_morning">Good Morning</string>
+    <string name="good_afternoon">Good Afternoon</string>
+    <string name="good_evening">Good Evening</string>
+    <string name="todays_topic">Today\'s Topic</string>
+    <string name="start_learning">Start Learning</string>
+    <string name="estimated_time">Estimated time: %1$s min</string>
+    <string name="days_until_exam">%1$d days until exam</string>
+    <string name="syllabus_progress">Syllabus Progress</string>
+    <string name="on_track">On Track ✓</string>
+    <string name="behind_schedule">Behind Schedule ⚠</string>
+    <string name="ahead_of_schedule">Ahead of Schedule 🚀</string>
+    <string name="weak_topics">Weak Topics</string>
+    <string name="upcoming_topics">Up Next</string>
+    <string name="checklist_watch_material">Watch / read learning material</string>
+    <string name="checklist_practice">Complete practice questions</string>
+    <string name="checklist_quiz">Take quick quiz</string>
+    <string name="no_topic_today">No topics scheduled today. Great job!</string>
+    <string name="revision_mode">Revision Mode</string>
+    <string name="all_done">All Done!</string>
+
+    <!-- Plan -->
+    <string name="plan_title">Study Plan</string>
+    <string name="exam_day">EXAM DAY</string>
+    <string name="revision_day">Revision</string>
+    <string name="completed">Completed</string>
+    <string name="missed">Missed</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="today">Today</string>
+
+    <!-- Subjects -->
+    <string name="subjects_title">Subjects</string>
+    <string name="add_subject">Add Subject</string>
+    <string name="subject_progress">%1$d%%</string>
+    <string name="topics_done">%1$d / %2$d topics</string>
+    <string name="edit_syllabus">Edit Syllabus</string>
+    <string name="upload_syllabus">Upload Syllabus</string>
+    <string name="add_unit">Add Unit</string>
+    <string name="add_topic">Add Topic</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="mark_completed">Mark Completed</string>
+    <string name="difficulty_easy">Easy</string>
+    <string name="difficulty_medium">Medium</string>
+    <string name="difficulty_hard">Hard</string>
+
+    <!-- Learning session -->
+    <string name="learning_session_title">Learning Session</string>
+    <string name="key_concepts">Key Concepts</string>
+    <string name="explanation">Explanation</string>
+    <string name="examples">Examples</string>
+    <string name="important_points">Important Points</string>
+    <string name="practice_questions">Practice Questions</string>
+    <string name="did_you_understand">Did you understand this topic?</string>
+    <string name="understood_yes">Yes, Understood</string>
+    <string name="needs_revision">Need Revision</string>
+    <string name="difficult">Difficult</string>
+    <string name="take_quiz">Take Quiz</string>
+    <string name="mark_topic_done">Mark Topic Done</string>
+
+    <!-- Quiz -->
+    <string name="quiz_title">Quick Quiz</string>
+    <string name="quiz_question_number">Question %1$d of %2$d</string>
+    <string name="quiz_submit">Submit Answer</string>
+    <string name="quiz_next">Next Question</string>
+    <string name="quiz_finish">Finish Quiz</string>
+    <string name="quiz_score">Score: %1$d / %2$d</string>
+    <string name="quiz_retry">Retry Quiz</string>
+    <string name="quiz_missed_concepts">Needs More Practice</string>
+    <string name="quiz_result_great">Great job! 🎉</string>
+    <string name="quiz_result_good">Good effort! Keep going.</string>
+    <string name="quiz_result_needswork">Review this topic again.</string>
+
+    <!-- Progress -->
+    <string name="progress_title">Progress</string>
+    <string name="overall_progress">Overall Progress</string>
+    <string name="topics_completed">Topics Completed</string>
+    <string name="study_streak">Study Streak</string>
+    <string name="streak_days">%1$d days</string>
+    <string name="quiz_average">Quiz Average</string>
+    <string name="exam_readiness">Exam Readiness</string>
+    <string name="readiness_excellent">Excellent 🚀</string>
+    <string name="readiness_good">Good 👍</string>
+    <string name="readiness_fair">Fair ⚠</string>
+    <string name="readiness_at_risk">At Risk ❗</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save_profile">Save Changes</string>
+    <string name="notifications_enabled">Notifications</string>
+    <string name="notification_daily_reminder">Daily Study Reminder</string>
+    <string name="notification_exam_warning">Exam Countdown Alerts</string>
+    <string name="notification_behind">Behind Schedule Alerts</string>
+    <string name="reset_data">Reset All Data</string>
+    <string name="reset_confirm_title">Reset Everything?</string>
+    <string name="reset_confirm_message">This will delete all your subjects, topics, and progress. This cannot be undone.</string>
+    <string name="reset_confirm_yes">Yes, Reset</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Upload -->
+    <string name="upload_title">Upload Syllabus</string>
+    <string name="upload_description">Select your syllabus PDF or text file. We\'ll automatically extract subjects, units, and topics.</string>
+    <string name="pick_file">Pick PDF / Text File</string>
+    <string name="parsing_syllabus">Parsing syllabus…</string>
+    <string name="parse_success">Extracted %1$d topics. Review below before confirming.</string>
+    <string name="parse_failed">Could not auto-parse. Edit manually below.</string>
+    <string name="confirm_and_generate_plan">Confirm &amp; Generate Plan</string>
+
+    <!-- Manual Editor -->
+    <string name="manual_editor_title">Edit Syllabus</string>
+    <string name="label_subject_name">Subject Name</string>
+    <string name="label_unit_name">Unit Name</string>
+    <string name="label_topic_name">Topic Name</string>
+    <string name="label_estimated_minutes">Est. Minutes</string>
+    <string name="label_difficulty">Difficulty</string>
+    <string name="save">Save</string>
+    <string name="generate_plan">Generate Study Plan</string>
+
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+    <string name="no_data">No data yet.</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="percent_format">%1$d%%</string>
+    <string name="minutes_short">%1$d min</string>
+</resources>

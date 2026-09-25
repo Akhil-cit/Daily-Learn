@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_weak_topic.xml — Chip-style weak topic -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="6dp">
+
+    <TextView
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:text="⚠"
+        android:textSize="16sp"
+        android:textColor="@color/colorWarning" />
+
+    <TextView
+        android:id="@+id/tv_weak_topic_name"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Algorithm Analysis"
+        android:textSize="14sp"
+        android:textColor="@color/textSecondary" />
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary brand colors -->
+    <color name="colorPrimary">#5C6BC0</color>
+    <color name="colorPrimaryDark">#3949AB</color>
+    <color name="colorPrimaryVariant">#7986CB</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+
+    <!-- Secondary / Accent -->
+    <color name="colorSecondary">#26A69A</color>
+    <color name="colorSecondaryVariant">#4DB6AC</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+
+    <!-- Tertiary -->
+    <color name="colorTertiary">#FF7043</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+
+    <!-- Background & Surface (light) -->
+    <color name="colorBackground">#F5F5F8</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorSurfaceVariant">#EEF0F8</color>
+    <color name="colorOnBackground">#1A1C2E</color>
+    <color name="colorOnSurface">#1A1C2E</color>
+    <color name="colorOnSurfaceVariant">#44475A</color>
+
+    <!-- Status colors -->
+    <color name="colorSuccess">#43A047</color>
+    <color name="colorWarning">#FFA726</color>
+    <color name="colorError">#EF5350</color>
+    <color name="colorInfo">#29B6F6</color>
+
+    <!-- Card & Divider -->
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorDivider">#E0E0E6</color>
+
+    <!-- Bottom Nav -->
+    <color name="colorBottomNavBackground">#FFFFFF</color>
+    <color name="colorBottomNavSelected">#5C6BC0</color>
+    <color name="colorBottomNavUnselected">#9E9EAF</color>
+
+    <!-- Topic status colors -->
+    <color name="colorTopicCompleted">#43A047</color>
+    <color name="colorTopicToday">#5C6BC0</color>
+    <color name="colorTopicUpcoming">#9E9EAF</color>
+    <color name="colorTopicRevision">#FF7043</color>
+    <color name="colorTopicExam">#EF5350</color>
+
+    <!-- Difficulty colors -->
+    <color name="colorDifficultyEasy">#43A047</color>
+    <color name="colorDifficultyMedium">#FFA726</color>
+    <color name="colorDifficultyHard">#EF5350</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#1A1C2E</color>
+    <color name="textSecondary">#44475A</color>
+    <color name="textHint">#9E9EAF</color>
+    <color name="textOnDark">#FFFFFF</color>
+
+    <!-- Gradient start/end for hero card -->
+    <color name="gradientStart">#5C6BC0</color>
+    <color name="gradientEnd">#26A69A</color>
+</resources>

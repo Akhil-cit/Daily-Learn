@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- Hero Header -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_hero_card"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI SYLLABUS ANALYZER"
+                    android:textSize="11sp"
+                    android:textColor="#AAffffff"
+                    android:letterSpacing="0.14"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Syllabus → Daily Topics"
+                    android:textSize="22sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Upload your syllabus document or paste syllabus text to automatically divide it into daily study topics."
+                    android:textSize="13sp"
+                    android:textColor="#DDffffff" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Upload Section Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_upload_controls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Import Syllabus"
+                        android:textSize="17sp"
+                        android:textColor="@color/textPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Choose your syllabus PDF, photo/scan, or paste text"
+                        android:textSize="13sp"
+                        android:textColor="@color/textSecondary" />
+
+                    <!-- Primary Upload Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_upload_syllabus"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="16dp"
+                        android:text="Upload Syllabus Document"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        app:icon="@drawable/ic_upload"
+                        app:iconGravity="textStart"
+                        app:iconPadding="10dp"
+                        app:iconTint="#FFFFFF"
+                        app:cornerRadius="12dp"
+                        android:backgroundTint="@color/colorPrimary" />
+
+                    <!-- Secondary Paste Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_paste_syllabus"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Paste Syllabus Text Directly"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        app:icon="@drawable/ic_paste"
+                        app:iconGravity="textStart"
+                        app:iconPadding="10dp"
+                        app:iconTint="@color/colorPrimary"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="1.5dp"
+                        app:cornerRadius="12dp" />
+
+                    <!-- Selected File Preview -->
+                    <LinearLayout
+                        android:id="@+id/layout_file_preview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/bg_card_stroke"
+                        android:padding="16dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📄"
+                                android:textSize="24sp"
+                                android:layout_marginEnd="12dp" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SELECTED SYLLABUS"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/textSecondary"
+                                    android:letterSpacing="0.1"
+                                    android:fontFamily="sans-serif-medium" />
+
+                                <TextView
+                                    android:id="@+id/tv_selected_filename"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Syllabus.pdf"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/textPrimary"
+                                    android:textStyle="bold"
+                                    android:maxLines="1"
+                                    android:ellipsize="middle" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- Target Days Input -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginTop="16dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="How many days to complete this syllabus?"
+                                android:textSize="13sp"
+                                android:textColor="@color/textPrimary" />
+
+                            <EditText
+                                android:id="@+id/et_target_days"
+                                android:layout_width="64dp"
+                                android:layout_height="44dp"
+                                android:background="@drawable/bg_input_rounded"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text="20"
+                                android:textColor="@color/textPrimary"
+                                android:textStyle="bold"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <!-- Analyze Button -->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_analyze_syllabus"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            android:text="✨ Analyze Syllabus"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="@color/colorPrimary"
+                            app:cornerRadius="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Loading Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center">
+
+                    <ProgressBar
+                        android:id="@+id/pb_analyzing"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:indeterminate="true" />
+
+                    <TextView
+                        android:id="@+id/tv_loading_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Analyzing syllabus..."
+                        android:textSize="15sp"
+                        android:textColor="@color/textPrimary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Extracting topics &amp; calculating daily groups..."
+                        android:textSize="12sp"
+                        android:textColor="@color/textSecondary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Results Section Header -->
+            <LinearLayout
+                android:id="@+id/layout_results_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="COURSE:"
+                            android:textSize="11sp"
+                            android:textColor="@color/textSecondary"
+                            android:letterSpacing="0.1" />
+
+                        <TextView
+                            android:id="@+id/tv_result_course_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Object Oriented Programming"
+                            android:textSize="18sp"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_result_course_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="25SS212"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:background="@drawable/bg_badge_primary"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_result_total_days"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="TOTAL DAYS: 20"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorTertiary"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_copy_json"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="📋 Copy JSON"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorPrimary"
+                        app:strokeColor="@color/colorPrimaryVariant"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save_and_start_learning"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="🚀 Save Plan &amp; Start Learning"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="14dp" />
+            </LinearLayout>
+
+            <!-- Results Daily Topics List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_daily_topics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_topic_row.xml — Topic row in subject detail / editor -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="10dp">
+
+    <TextView
+        android:id="@+id/tv_topic_status_icon"
+        android:layout_width="24dp"
+        android:layout_height="wrap_content"
+        android:text="○"
+        android:textSize="16sp"
+        android:textColor="@color/textHint" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp">
+
+        <TextView
+            android:id="@+id/tv_topic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Introduction to Data Structures"
+            android:textSize="14sp"
+            android:textColor="@color/textPrimary" />
+
+        <TextView
+            android:id="@+id/tv_topic_meta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy • 30 min"
+            android:textSize="12sp"
+            android:textColor="@color/textHint" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_topic_needs_revision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revise"
+        android:textSize="10sp"
+        android:textColor="@color/colorWarning"
+        android:background="@drawable/bg_pill_primary"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:visibility="gone" />
+</LinearLayout>

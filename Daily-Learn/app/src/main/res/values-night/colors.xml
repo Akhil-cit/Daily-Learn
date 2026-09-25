@@ -1,0 +1,17 @@
+<resources>
+    <!-- Dark mode overrides -->
+    <color name="colorBackground">#12131F</color>
+    <color name="colorSurface">#1E2033</color>
+    <color name="colorSurfaceVariant">#282A3E</color>
+    <color name="colorCard">#1E2033</color>
+    <color name="colorDivider">#2E3050</color>
+    <color name="colorOnBackground">#E8EAF6</color>
+    <color name="colorOnSurface">#E8EAF6</color>
+    <color name="colorOnSurfaceVariant">#9FA8DA</color>
+    <color name="colorBottomNavBackground">#1E2033</color>
+    <color name="colorBottomNavSelected">#7986CB</color>
+    <color name="colorBottomNavUnselected">#5C607A</color>
+    <color name="textPrimary">#E8EAF6</color>
+    <color name="textSecondary">#9FA8DA</color>
+    <color name="textHint">#5C607A</color>
+</resources>
